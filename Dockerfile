@@ -10,7 +10,7 @@ env POSTGRES_DB=postgres
 arg HOST_ST_GEOMETRY_PATH= "C:\Users\jpfra\Downloads\ArcGISPro_34_ST_Geometry_PostgreSQL_192933\PostgreSQL\15\Linux64\st_geometry.so"
 
 # Copy the st_geometry.so file to the correct location in the container
-copy ${HOST_ST_GEOMETRY_PATH} /usr/lib/postgresql/15/lib/st_geometry.so
+copy ${HOST_ST_GEOMETRY_PATH} /usr/lib/postgresql/15/lib/
 
 # expose the default PostgreSQL port
 expose 5432

@@ -13,7 +13,7 @@ db_admin = "postgres"  # PostgreSQL superuser username
 db_admin_password = "postgres"  # PostgreSQL superuser password
 gdb_admin = "sde"  # Geodatabase administrator username (will be created if not existing)
 gdb_admin_password = "postgres"  # Password for the sde user
-auth_file = r"C:path//to//keycodes"  # Path to the ArcGIS Server/Pro authorization file
+auth_file = r"C:\DIRA\BKG\DB\keycodes"  # Path to the ArcGIS Server/Pro authorization file
 spatial_type = "ST_GEOMETRY"  # Spatial type for the geodatabase
 
 # Run the Create Enterprise Geodatabase tool

@@ -29,7 +29,12 @@ This repository provides tools to create an Esri Enterprise Geodatabase in Docke
 
 - **Dockerfile**: Specifies the image setup with `st_geometry` and initialization scripts.
 - **`st_geometry.so`**: The Esri spatial library (to be added manually).
--- You will need to specifie the location to your **keycode** file.
+- Go to https://my.esri.com > Downloads > ArcGIS Pro
+   - Scroll down to ArcGIS Pro ST_Geometry Libraries (Oracle)
+   - Click Download to get a Zip archive that contains st_shapelib for Windows, Linux, and others
+   - My Esri often changes, so be prepared to spend some time searching
+   - You can specifie the path where the st_geometry file lies in the dockerfile
+-  You will need to specifie the location to your **keycode** file.
 ---
 
 ## Setup Instructions
