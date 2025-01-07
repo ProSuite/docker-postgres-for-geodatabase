@@ -40,10 +40,46 @@ Use the `Build-Image.ps1` script to create a Docker image:
 
 ```powershell
 .\Build-Image.ps1
+```
+#### Adjustable Parameters:
+- `POSTGRES_PASSWORD`: Password for the PostgreSQL database superuser.
+- `POSTGRES_DB`: Default database name.
+- `POSTGRES_USER`: Default database user (superuser).
+#### Required Adjustments:
+Ensure the `st_geometry.so` file is present in the same directory as the `Dockerfile`.
+
+### 2. Start Docker Container
+Use the `Run-Container.ps1` to start up the docker containere:
+
+```powershell
 .\Run-Container.ps1
+```
+#### Adjustable Parameters:
+- `containerName`: The name of the Docker container.
+- `hostDataDir`: Path on your host machine to store PostgreSQL data persistently.
+- `dbName`: Name of the database to be created.
+- `dbUser`: The PostgreSQL superuser name.
+- `dbPassword`: Password for the PostgreSQL superuser.
+-  `imageName` : 
+
+### 3. Create Geodatabase
+
+Use the `Create-SpatialType.ps1` to configures spatial extensions
+```powershell
 .\Create-SpatialType.ps1
+```
+#### Adjustable Parameters:
+- `containerName`: The name of the Docker container.
+- `dbName`: Name of the database to be created.
+- `dbUser`: The PostgreSQL superuser name.
+- `dbPassword`: Password for the PostgreSQL superuser.
+
+### 4. Create ArcGIS Enterprise Geodatabase
+```powershell
 python .\Create-ArcGIS-Enterprise-Geodatabase.py
 ```
+The path to your keyfile (`auth_file`)  need to be updated.
+-------------------------------------------------------------------------------------------------------------------------------------
 ## If you get a problem regarding the spatial_type:
 
 ### Copy `st_geometry` to the Docker Container
