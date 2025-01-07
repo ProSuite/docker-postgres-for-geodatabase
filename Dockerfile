@@ -6,8 +6,11 @@ env POSTGRES_USER=postgres
 env POSTGRES_PASSWORD=postgres
 env POSTGRES_DB=postgres
 
-# copy st_geometry.so library
-copy st_geometry.so /usr/lib/postgresql/15/lib/
+# Define an argument to pass the host path to st_geometry.so
+arg HOST_ST_GEOMETRY_PATH= "C:\Users\jpfra\Downloads\ArcGISPro_34_ST_Geometry_PostgreSQL_192933\PostgreSQL\15\Linux64\st_geometry.so"
+
+# Copy the st_geometry.so file to the correct location in the container
+copy ${HOST_ST_GEOMETRY_PATH} /usr/lib/postgresql/15/lib/st_geometry.so
 
 # expose the default PostgreSQL port
 expose 5432
