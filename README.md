@@ -5,10 +5,7 @@ This repository provides tools to create an Esri Enterprise Geodatabase in Docke
 ## Features
 
 - Build a Docker image with PostgreSQL/PostGIS and Esri's `st_geometry` library.
-- Create and configure a geodatabase inside a container.
-- PowerShell and Python scripts for automation.
-- Data persistence for containerized PostgreSQL databases.
-
+- Create and configure a Esri Enterprise geodatabase inside a container.
 ---
 
 ## Prerequisites
@@ -32,8 +29,7 @@ This repository provides tools to create an Esri Enterprise Geodatabase in Docke
 
 - **Dockerfile**: Specifies the image setup with `st_geometry` and initialization scripts.
 - **`st_geometry.so`**: The Esri spatial library (to be added manually).
-- **License file**: Required for ArcGIS Enterprise Geodatabase authorization.
-
+-- You will need to specifie the location to your **keycode** file.
 ---
 
 ## Setup Instructions
