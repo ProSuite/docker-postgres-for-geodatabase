@@ -80,10 +80,11 @@ Use the `Create-SpatialType.ps1` to configures spatial extensions
 - `dbPassword`: Password for the PostgreSQL superuser.
 
 ### 4. Create ArcGIS Enterprise Geodatabase
+Use `Create-ArcGIS-Enterprise-Geodatabase.py` to create an esri enterprise geodatabase
+The path to your keyfile (`auth_file`)  need to be updated.
 ```powershell
 python .\Create-ArcGIS-Enterprise-Geodatabase.py
 ```
-The path to your keyfile (`auth_file`)  need to be updated.
 -------------------------------------------------------------------------------------------------------------------------------------
 ## If you get a problem regarding the spatial_type:
 
