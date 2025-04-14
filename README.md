@@ -1,3 +1,6 @@
+> **📢 Important:** This is now legacy, but the code lives on:
+> Please go to https://github.com/ProSuite/geodatabase-containers
+
 # Docker-Postgres-for-Geodatabase
 
 This repository provides tools to create an Esri Enterprise Geodatabase in Docker based on a PostgreSQL/PostGIS image. The setup supports SQL access using PostGIS spatial functions and Esri's `st_geometry` spatial type.
